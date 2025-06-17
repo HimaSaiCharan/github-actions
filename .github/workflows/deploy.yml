@@ -1,27 +1,51 @@
-name: Run Vite Dev Server
+name: Build and Deploy to GitHub Pages
 
 on:
-  workflow_dispatch:  # manual trigger from GitHub Actions UI
+  push:
+    branches:
+      - main  # or master (your default branch)
+
+permissions:
+  contents: read
+  pages: write
+  id-token: write
+
+concurrency:
+  group: "pages"
+  cancel-in-progress: false
 
 jobs:
-  dev-server:
+  build:
     runs-on: ubuntu-latest
 
     steps:
-      - name: Checkout source code
+      - name: Checkout code
         uses: actions/checkout@v3
 
       - name: Setup Node.js
         uses: actions/setup-node@v3
         with:
-          node-version: 20  # or whatever version you use
+          node-version: 20
 
       - name: Install dependencies
         run: npm ci
 
-      - name: Run Vite dev server
-        run: |
-          nohup npm run dev &  # run vite in background
-          sleep 60             # keep server alive for 60 seconds (or more)
+      - name: Build the app
+        run: npm run build
 
-      # Optional: you can run tests against the running dev server here
+      - name: Upload artifact
+        uses: actions/upload-pages-artifact@v2
+        with:
+          path: ./dist
+
+  deploy:
+    needs: build
+    runs-on: ubuntu-latest
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
+
+    steps:
+      - name: Deploy to GitHub Pages
+        id: deployment
+        uses: actions/deploy-pages@v2
