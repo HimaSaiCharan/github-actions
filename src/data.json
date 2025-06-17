@@ -1,0 +1,58 @@
+[
+  { "Title": "1984", "Author": "George Orwell", "Year": 1949 },
+  { "Title": "Anna Karenina", "Author": "Leo Tolstoy", "Year": 1877 },
+  { "Title": "Brave New World", "Author": "Aldous Huxley", "Year": 1932 },
+  {
+    "Title": "Crime and Punishment",
+    "Author": "Fyodor Dostoevsky",
+    "Year": 1866
+  },
+  { "Title": "Don Quixote", "Author": "Miguel de Cervantes", "Year": 1605 },
+  { "Title": "Dracula", "Author": "Bram Stoker", "Year": 1897 },
+  { "Title": "Frankenstein", "Author": "Mary Shelley", "Year": 1818 },
+  { "Title": "Great Expectations", "Author": "Charles Dickens", "Year": 1860 },
+  { "Title": "Jane Eyre", "Author": "Charlotte Brontë", "Year": 1847 },
+  { "Title": "Les Misérables", "Author": "Victor Hugo", "Year": 1862 },
+  { "Title": "Moby-Dick", "Author": "Herman Melville", "Year": 1851 },
+  {
+    "Title": "One Hundred Years of Solitude",
+    "Author": "Gabriel García Márquez",
+    "Year": 1967
+  },
+  { "Title": "Pride and Prejudice", "Author": "Jane Austen", "Year": 1813 },
+  {
+    "Title": "The Brothers Karamazov",
+    "Author": "Fyodor Dostoevsky",
+    "Year": 1880
+  },
+  {
+    "Title": "The Catcher in the Rye",
+    "Author": "J.D. Salinger",
+    "Year": 1951
+  },
+  {
+    "Title": "The Count of Monte Cristo",
+    "Author": "Alexandre Dumas",
+    "Year": 1844
+  },
+  {
+    "Title": "The Great Gatsby",
+    "Author": "F. Scott Fitzgerald",
+    "Year": 1925
+  },
+  { "Title": "The Hobbit", "Author": "J.R.R. Tolkien", "Year": 1937 },
+  {
+    "Title": "The Lord of the Rings",
+    "Author": "J.R.R. Tolkien",
+    "Year": 1954
+  },
+  { "Title": "The Odyssey", "Author": "Homer", "Year": "800 BCE" },
+  {
+    "Title": "The Picture of Dorian Gray",
+    "Author": "Oscar Wilde",
+    "Year": 1890
+  },
+  { "Title": "To Kill a Mockingbird", "Author": "Harper Lee", "Year": 1960 },
+  { "Title": "War and Peace", "Author": "Leo Tolstoy", "Year": 1869 },
+  { "Title": "Wuthering Heights", "Author": "Emily Brontë", "Year": 1847 }
+]
