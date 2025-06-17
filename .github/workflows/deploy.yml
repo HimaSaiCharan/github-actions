@@ -1,0 +1,27 @@
+name: Run Vite Dev Server
+
+on:
+  workflow_dispatch:  # manual trigger from GitHub Actions UI
+
+jobs:
+  dev-server:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout source code
+        uses: actions/checkout@v3
+
+      - name: Setup Node.js
+        uses: actions/setup-node@v3
+        with:
+          node-version: 20  # or whatever version you use
+
+      - name: Install dependencies
+        run: npm ci
+
+      - name: Run Vite dev server
+        run: |
+          nohup npm run dev &  # run vite in background
+          sleep 60             # keep server alive for 60 seconds (or more)
+
+      # Optional: you can run tests against the running dev server here
