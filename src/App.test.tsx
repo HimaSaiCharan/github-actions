@@ -6,6 +6,6 @@ describe("App Component", () => {
   it("renders hello world text", () => {
     render(<App />);
 
-    expect(screen.getByText(/hello/i)).toBeInTheDocument();
+    expect(screen.getByText(/the count is/i)).toBeInTheDocument();
   });
 });
